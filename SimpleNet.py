@@ -1,11 +1,6 @@
 import numpy as np
 import ast
 import os
-from numba import jit 
-
-def sigmoid(x):                                        
-    return 1 / (1 + np.exp(-x))
-
 
 def readSave(fileDir): #loads previously saved training data
     try:
