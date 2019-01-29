@@ -6,7 +6,6 @@ tau = 2*math.pi
 def compressInput(num): #compresses input so its between 0 and 1
     if num < 0:
         num *= -1
-    print((num % tau))
     return [(num % tau) / tau]
 
 def decompressOutput(num, negative=False): #decompresses output so it between -1 and 1
