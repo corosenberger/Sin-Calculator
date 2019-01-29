@@ -11,14 +11,15 @@ def compressInput(num): #compresses input so its between 0 and 1
 
 def decompressOutput(num, negative=False): #decompresses output so it between -1 and 1
     num = num[0][0]
+    num = (num - .5) * 2
     if negative: #checks if the initial input was negative
         num *= -1
-    return (num - .5) * 2
+    return num
 
 def main():
-    layers, weights, biases = sn.readSave("sincalculator.txt") #retrieves previous training data
+    layers, weights, biases = sn.readSave("sincalculatorsave.txt") #retrieves previous training data
     net = sn.SimpleNet(layers,weights,biases)
-    inputValue = 11
+    inputValue = -11
     print(decompressOutput(net.computeOutput(compressInput(inputValue)),inputValue < 0)) #prints the Neural Networks guess of sin(inputValu)
     print(math.sin(inputValue)) #prints the actual value of sin(inputValue) to test for accuracy
     
