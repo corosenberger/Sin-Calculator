@@ -22,6 +22,8 @@ SimpleNet.py:
   -applies the previously calculated gradients to the weights and biases in the net
   -resets the calculated gradients
   -should only be called after computeOutput and backprop have been called
+-getTrainingData:
+  -returns the weights and biases as lists
 -writeSave:
   -saves the net structure and the training data to the specified file name in the current directory
   -will create a new file in the current directory if the file name specified does not exist yet
