@@ -52,7 +52,7 @@ class SimpleNet:
         self._wgrads = [0]*len(self._layerList) #resets weight gradients
         self._bgrads = [0]*len(self._layerList) #resets bias gradients
 
-    def getTrainingData(self):
+    def getTrainingData(self): #returns the weights and biases as pure lists
         weights = [0]
         biases = [0]
         for i in range(1,len(self._layerList)):
